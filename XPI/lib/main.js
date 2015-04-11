@@ -18,8 +18,8 @@ let viewFor = require('sdk/view/core').viewFor;
 let localStorage = ss.storage;
 
 
-let { ToggleButton } = require('sdk/ui/button/toggle'),
-	styleSheetButton;
+//let { ToggleButton } = require('sdk/ui/button/toggle'),
+//	styleSheetButton;
 
 // require chrome allows us to use XPCOM objects...
 const {Cc,Ci,Cu,components} = require('chrome');
@@ -423,6 +423,7 @@ pageMod.PageMod({
 					break;
 				case 'pageAction':
 					let onoff = request.visible ? 'on' : 'off';
+					/*
 					switch (request.action) {
 						case 'show':
 							if (!styleSheetButton) {
@@ -482,7 +483,7 @@ pageMod.PageMod({
 								styleSheetButton.destroy();
 							}
 							break;
-					}
+					}*/
 					break;
 				case 'addURLToHistory':
 					isPrivate = priv.isPrivate(windows.activeWindow);
